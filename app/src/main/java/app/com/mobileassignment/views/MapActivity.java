@@ -12,6 +12,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import androidx.appcompat.app.AppCompatActivity;
+import app.com.mobileassignment.IdlingResource.CountingIdlingResourceSingleton;
 import app.com.mobileassignment.R;
 
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
@@ -28,7 +29,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         latitude = intent.getFloatExtra(MainActivity.COORDINATES_LAT, 0.0f);
         longitude = intent.getFloatExtra(MainActivity.COORDINATES_LON, 0.0f);
 
-
+        CountingIdlingResourceSingleton.increment();
         MapFragment mMapFragment = MapFragment.newInstance();
         FragmentTransaction fragmentTransaction =
                 getFragmentManager().beginTransaction();
@@ -36,7 +37,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         fragmentTransaction.commit();
 
         mMapFragment.getMapAsync(this);
-
+        CountingIdlingResourceSingleton.decrement();
 
     }
 

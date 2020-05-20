@@ -1,0 +1,50 @@
+Network handling/ if results are coming from actual server:
+- How App would handle getting city information when different networks (slow,
+normal, 3G...).
+- How App will handle when offline network.
+- How app will handle when viewing map when different network speeds
+
+Search on Cities
+- Correct cities list searched on should be displayed.
+- Multiple of cities with same name but different countries should be displayed when searching by city
+- Search Algorithm (search will start with two letters)./ Actually start with only one letter
+- Search by city and country names should be applicable
+- Search by country should be applicable and show all cities
+- Search result should be sorted alphabetically
+- no duplicated entries should exist when searching (same city and country)
+- All cities list should be displayed again when user clear search
+- user can search with special characters
+- user can search with special letters
+
+- Bug: searching with city, country is not working
+- Bug: searching with "," included is not working
+- Bug: duplicated entries when searching (Hamburg, US... Hamburg, US)
+- Bug: Searching with "Hamburg,"  produced wrong results (it should have Hamburg, DE and Hamburg, Fr...) but it contained only one
+
+
+
+Cities List
+- City list should be scrollable with no crashes
+- Last item in list can be scrolled to
+- Use can scroll up and down
+- list should be sorted alphabetically
+- no duplicated entries should exist
+
+Handling City Locations on Map
+- Getting the right location when tapping on any city (coordinates).
+- Message to user should be displayed if error happen and map could not load.
+- Message to user if any error happens when map is getting displayed (even if it is actually displayed)
+- User can zoom in on map
+- User can zoom out on map
+- User can move right or left on map when normal view (not zoomed)
+- User can move right or left on map after zoom in
+- User can move right or left on map after zoom out
+- Use can check map on different phone sizes and screens
+
+Handling App permissions
+- Location.
+- Network
+
+Background/Foreground:
+- When user leaves App to background while on Map.. when back again map view should be still displayed
+- When user leaves App to background while on cities list.. when back again cities list view should be still displayed

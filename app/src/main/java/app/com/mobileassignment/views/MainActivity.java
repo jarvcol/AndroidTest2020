@@ -3,7 +3,6 @@ package app.com.mobileassignment.views;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -17,6 +16,7 @@ import java.util.Collections;
 import java.util.List;
 
 import app.com.mobileassignment.views.adapters.CityAdapter;
+import androidx.appcompat.app.AppCompatActivity;
 import app.com.mobileassignment.R;
 import app.com.mobileassignment.model.City;
 import app.com.mobileassignment.utils.JsonMapper;
